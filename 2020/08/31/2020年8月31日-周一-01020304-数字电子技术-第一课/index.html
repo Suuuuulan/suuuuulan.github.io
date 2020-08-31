@@ -65,7 +65,184 @@
     <div class="container">
         <h1 class="post-title">2020年8月31日 周一 01020304 数字电子技术 第一课</h1>
 <article class="post markdown-style">
-  
+  <h2 id="1-1-概述"><a href="#1-1-概述" class="headerlink" title="1.1  概述"></a>1.1  概述</h2><h3 id="1-1-1-数字信号和数字电路"><a href="#1-1-1-数字信号和数字电路" class="headerlink" title="1.1.1  数字信号和数字电路"></a>1.1.1  数字信号和数字电路</h3><img src="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831150347.png" style="zoom: 50%;" />
+
+<p><strong>模拟信号</strong>：在时间上和幅值上都是<strong>连续</strong>变化的信号。</p>
+<p><strong>模拟电路</strong>：对模拟信号进行传递、加工和处理的电子线路。</p>
+<hr>
+<p><img src="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831151042.png"></p>
+<p><strong>数字信号</strong>：在时间上和幅值上都是<strong>断续</strong>变化的离散信号。</p>
+<p>我们经常所处理的数字信号是经过标准化处理的。</p>
+<p>标准化处理之后只有2个取值—高电平、低电平,分别用数字1、0表示。</p>
+<p>下图为标准化的数字信号波形。</p>
+<p><img src="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831151635.png"></p>
+<p><strong>数字电路</strong>：对数字信号进行传递、加工和处理的电子线路。</p>
+<hr>
+<h3 id="1-1-2-数字电路的分类"><a href="#1-1-2-数字电路的分类" class="headerlink" title="1.1.2  数字电路的分类"></a>1.1.2  数字电路的分类</h3><p>根据电路结构不同分，可分为两类：<strong>分立元件电路</strong>和<strong>集成电路</strong>。</p>
+<p><strong>分立元件电路</strong>：将晶体管、电阻、电容等元器件用导线在线路板上连接起来的电路。</p>
+<p><img src="https://gitee.com/suuuuulan/images/raw/master/img/TB11ni9NXXXXXaRaXXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg"></p>
+<p>上方为直插式，下方为贴片式。</p>
+<p><strong>集成电路</strong>：将上述元器件和导线通过半导体制造工艺做在一块硅片上而成为一个不可分割的整体电路。</p>
+<img src="https://gitee.com/suuuuulan/images/raw/master/img/20200831%E5%BC%95%E7%94%A8%E8%8A%AF%E7%89%87image.jpg" style="zoom: 33%;" />
+
+<p>两种为同一种元件，封装不同。</p>
+<hr>
+<p>根据半导体的导电类型不同，可分为<strong>双极型数字集成电路</strong>和<strong>单极型数字集成电路</strong>。</p>
+<p><strong>双极性数字集成电路</strong>是以双极型晶体管作为基本器件。如TTL、ECL。</p>
+<p>双极型晶体管内部参与导电的，载流子为空穴和自由电子。</p>
+<p><strong>单极型数字集成电路</strong>是以单极型晶体管作为基本器件。如CMOS。</p>
+<p>内部只有一种载流子参与导电。-</p>
+<hr>
+<p>根据集成密度不同分</p>
+<p><img src="https://gitee.com/suuuuulan/images/raw/master/img/%7DI]4D_NE[UAR$%H@T%7B%TV47.png"></p>
+<h2 id="1-2-数制和码制"><a href="#1-2-数制和码制" class="headerlink" title="1.2  数制和码制"></a>1.2  数制和码制</h2><h3 id="1-2-1-数制"><a href="#1-2-1-数制" class="headerlink" title="1.2.1  数制"></a>1.2.1  数制</h3><h4 id="一、十进制数"><a href="#一、十进制数" class="headerlink" title="一、十进制数"></a>一、十进制数</h4><p><strong>表达式</strong>：<br>$$<br>XXX或(XXX)_{10}或(XXX)_D<br>$$</p>
+<p><strong>数码</strong>：0、1、2、3、4、5、6、7、8、9</p>
+<p><strong>尾标</strong>：10或D</p>
+<p><strong>进位规律</strong>：逢十进一，借一当十。</p>
+<p>其表达式可展开为：<br>$$<br>(3176.54)_{10}=3<em>10^3+1</em>10^2+7<em>10^1+6</em>10^0+5<em>10^{-1}+4</em>10^{-2}<br>$$<br>其中：<br>$$<br>10^3、10^2、10^1、10^0、10^{-1}、10^{-2}<br>$$<br>称为十进制数各数位的权。</p>
+<p>数码所处的位置不同时，所代表的数值不同。</p>
+<p>数码与权的乘积，称为加权系数。</p>
+<p>十进制数可表示为各位加权系数之和，称为按权展开式。</p>
+<p>例如，<br>$$<br>(76.54)_{10}=7<em>10^1+6</em>10^0+5<em>10^{-1}+4</em>10^{-2}<br>$$</p>
+<h4 id="二、二进制数"><a href="#二、二进制数" class="headerlink" title="二、二进制数"></a>二、二进制数</h4><p>只有两个<strong>数码</strong>：0和1；</p>
+<p><strong>尾标</strong>：2或B</p>
+<p><strong>进位规则</strong>为：逢二进一。</p>
+<p><strong>二进制数优点</strong>：</p>
+<p>1️⃣只有两个数码0和1，课代表两种状态，用电路实现很容易。</p>
+<p>2️⃣基本运算规则简单，操作方便。</p>
+<p>缺点：数值较大时，位数过多，不便于书写和识别。</p>
+<h4 id="三、八进制数"><a href="#三、八进制数" class="headerlink" title="三、八进制数"></a>三、八进制数</h4><p>有8个<strong>数码</strong>：0、1、2、3、4、5、6、7</p>
+<p><strong>尾标</strong>：8或O</p>
+<p><strong>进位规则</strong>：逢八进一。</p>
+<p><strong>特点</strong>：与二进制数相比，缩小了位数，缩短了字长。</p>
+<p>一个3位二进制数只要用1位8进制数表示，转换极其方便。</p>
+<h4 id="四、十六进制数"><a href="#四、十六进制数" class="headerlink" title="四、十六进制数"></a>四、十六进制数</h4><p>有16个<strong>数码</strong>：0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F。</p>
+<p>A、B、C、D、E、F分别代表10、11、12、13、14、15。</p>
+<p><strong>尾标</strong>：16或H</p>
+<p><strong>进位规则</strong>：逢十六进一</p>
+<p>AB H=<br>$$<br>AB_H=10<em>16^1+11</em>16^0=160+11=171<br>$$<br><strong>特点</strong>：与二进制数相比，大大缩小了位数，缩短了字长。</p>
+<p>一个4位二进制数只需要用1位是进制数表示，转换极其方便。</p>
+<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p><img src="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831162730.png"></p>
+<h3 id="1-2-2-不同进制数间相互转换"><a href="#1-2-2-不同进制数间相互转换" class="headerlink" title="1.2.2 不同进制数间相互转换"></a>1.2.2 不同进制数间相互转换</h3><h4 id="一、二进制数、八进制数、十六进制数转换十进制数"><a href="#一、二进制数、八进制数、十六进制数转换十进制数" class="headerlink" title="一、二进制数、八进制数、十六进制数转换十进制数"></a>一、二进制数、八进制数、十六进制数转换十进制数</h4><p>二进制数、八进制数、十六进制数按权展开求和就得到十进制数。</p>
+<p><img src="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831163132.png"></p>
+<h4 id="二、十进制数转换为二进制、八进制和十六进制"><a href="#二、十进制数转换为二进制、八进制和十六进制" class="headerlink" title="二、十进制数转换为二进制、八进制和十六进制"></a>二、十进制数转换为二进制、八进制和十六进制</h4><p>需要将整数和小数分别转换，再将转换结果按照与按顺序朴烈。</p>
+<h5 id="1、十进制转换为二进制"><a href="#1、十进制转换为二进制" class="headerlink" title="1、十进制转换为二进制"></a>1、十进制转换为二进制</h5><img src="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831163334.png" style="zoom: 80%;" />
+
+<h5 id="2、十进制整数转换为八进制数"><a href="#2、十进制整数转换为八进制数" class="headerlink" title="2、十进制整数转换为八进制数"></a>2、十进制整数转换为八进制数</h5><p>除8取余法</p>
+<p><img src="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831163508.png"></p>
+<h5 id="3、十进制整数转换为十六进制数"><a href="#3、十进制整数转换为十六进制数" class="headerlink" title="3、十进制整数转换为十六进制数"></a>3、十进制整数转换为十六进制数</h5><p>除16取余法</p>
+<p><img src="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831163605.png"></p>
+<h4 id="三、二进制与八进制和十六进制间的相互转换"><a href="#三、二进制与八进制和十六进制间的相互转换" class="headerlink" title="三、二进制与八进制和十六进制间的相互转换"></a>三、二进制与八进制和十六进制间的相互转换</h4><h5 id="1、二进制→八进制："><a href="#1、二进制→八进制：" class="headerlink" title="1、二进制→八进制："></a>1、二进制→八进制：</h5><img src="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831163830.png" style="zoom:80%;" />
+
+<h5 id="2、二进制→十六进制："><a href="#2、二进制→十六进制：" class="headerlink" title="2、二进制→十六进制："></a>2、二进制→十六进制：</h5><img src="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831163938.png" style="zoom:80%;" />
+
+<table>
+<thead>
+<tr>
+<th align="center">十进制</th>
+<th align="center">二进制</th>
+<th align="center">八进制</th>
+<th align="center">十六进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">0000</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0001</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">0010</td>
+<td align="center">2</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">0011</td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">0100</td>
+<td align="center">4</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">0101</td>
+<td align="center">5</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">0110</td>
+<td align="center">6</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">0111</td>
+<td align="center">7</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">1000</td>
+<td align="center">10</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">1001</td>
+<td align="center">11</td>
+<td align="center">9</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">1010</td>
+<td align="center">12</td>
+<td align="center">A</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="center">1011</td>
+<td align="center">13</td>
+<td align="center">B</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="center">1100</td>
+<td align="center">14</td>
+<td align="center">C</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="center">1101</td>
+<td align="center">15</td>
+<td align="center">D</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="center">1110</td>
+<td align="center">16</td>
+<td align="center">E</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="center">1111</td>
+<td align="center">17</td>
+<td align="center">F</td>
+</tr>
+</tbody></table>
+
 </article>
 
     <div class="pagenator post-pagenator">
