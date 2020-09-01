@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   
-  <title>Archives: 8/2020: 2020 [ 苏兰的大杂烩 ]</title>
+  <title>2020年9月1日【周二】【01020304】单片机小系统设计-第一课 [ 苏兰的大杂烩 ]</title>
   
     <!-- stylesheets list from config.yml -->
     
@@ -63,59 +63,76 @@
 </div>
     </div>
     <div class="container">
-        <div class="article">
-      
-    
-      <div class="year-list">
-        <h3>2020</h3>
-        <ul>
-          
-            <li >
-              <time>2020-09-01</time>
-              <a href="/2020/09/01/2020年9月1日【周二】【01020304】单片机小系统设计-第一课/">
-                2020年9月1日【周二】【01020304】单片机小系统设计-第一课
-              </a>
-            </li>
-          
-            <li >
-              <time>2020-08-31</time>
-              <a href="/2020/08/31/2020年8月31日-周一-01020304-数字电子技术-第一课/">
-                2020年8月31日 周一 01020304 数字电子技术 第一课
-              </a>
-            </li>
-          
-            <li >
-              <time>2020-08-15</time>
-              <a href="/2020/08/15/Hexo搭建完成！/">
-                Hexo搭建完成！
-              </a>
-            </li>
-          
-            <li >
-              <time>2020-08-15</time>
-              <a href="/2020/08/15/第一个/">
-                第一个
-              </a>
-            </li>
-          
-        </ul>
-      </div>
-    
-      <div class="year-list">
-        <h3>2019</h3>
-        <ul>
-          
-            <li >
-              <time>2019-11-02</time>
-              <a href="/2019/11/02/列车的故事/">
-                列车的故事
-              </a>
-            </li>
-          
-        </ul>
-      </div>
-     
+        <h1 class="post-title">2020年9月1日【周二】【01020304】单片机小系统设计-第一课</h1>
+<article class="post markdown-style">
+  <h2 id="单片机"><a href="#单片机" class="headerlink" title="单片机"></a>单片机</h2><p>单个芯片实现了微型计算机的功能。</p>
+<p>本课程主要学习的是C51单片机。</p>
+<p>1️⃣电源</p>
+<p>2️⃣时钟</p>
+<p>18、19管脚</p>
+<p>晶体振荡器（该知识点有些许疑惑，后续会补充，但愿不会搁置太久）</p>
+<p>3️⃣复位（RESET）</p>
+<p>9管脚</p>
+<p>4️⃣EA</p>
+<script type="math/tex; mode=display">
+\over EA</script><p>EA上方是有<strong>上划线</strong>的！！！</p>
+<p>这个<strong>横杠</strong>→为低电平时有效。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">高电平</td>
+<td style="text-align:center">HIGH</td>
+<td style="text-align:center">5V</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">低电平</td>
+<td style="text-align:center">LOW</td>
+<td style="text-align:center">0V</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
 </div>
+<p><img src="https://gitee.com/suuuuulan/images/raw/master/img/IMG_2940(20200901-161514).JPG" style="zoom: 33%;" /></p>
+<p>5️⃣输入/输出 [Input/Output] [I/O(32个)]</p>
+<p>4个口，8个管脚</p>
+<script type="math/tex; mode=display">
+P_0 、P_1、P_2、P_3</script><p><img src="https://gitee.com/suuuuulan/images/raw/master/img/IMG_2942(20200901-161520).JPG" style="zoom:50%;" /></p>
+<p>1️⃣2️⃣3️⃣4️⃣5️⃣构成最简单的电路系统</p>
+<p>在与二极管相连接时一定要接电阻。</p>
+<h3 id="编程部分"><a href="#编程部分" class="headerlink" title="编程部分"></a>编程部分</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;reg51.h&quot;</span></span></span><br><span class="line">sbit D = P_1;<span class="comment">//位定义，D变号</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    D = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/suuuuulan/images/raw/master/img/IMG_2941(20200901-161517).JPG" style="zoom:50%;" /></p>
+<p>上述方法需要位定义，较为麻烦。</p>
+<p>下面采用16进制方法解决。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;reg51.h&quot;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    P_1 = <span class="number">0x6E</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/suuuuulan/images/raw/master/img/IMG_2944(20200901-161527" alt="">.JPG)</p>
+<h3 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h3><p>上课所记</p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/2020090101020304%E7%AC%94%E8%AE%B0.jpg" alt=""></p>
+
+</article>
+
+    <div class="pagenator post-pagenator">
+    
+    
+
+    
+    <p>上次更新 2020-09-01</p>
+    
+    
+        <a class="extend next post-next" href="/2020/08/31/2020%E5%B9%B48%E6%9C%8831%E6%97%A5-%E5%91%A8%E4%B8%80-01020304-%E6%95%B0%E5%AD%97%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF-%E7%AC%AC%E4%B8%80%E8%AF%BE/">下一篇</a>
+    
+    </div>
+
     </div>
     <div class="footer">
         <div class="container">
