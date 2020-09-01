@@ -78,14 +78,13 @@
         <div class="article-item-content">
           
             <p>1.1  概述1.1.1  数字信号和数字电路
-
 模拟信号：在时间上和幅值上都是连续变化的信号。
 模拟电路：对模拟信号进行传递、加工和处理的电子线路。
 
 
 数字信号：在时间上和幅值上都是断续变化的离散信号。
 我们经常所处理的数字信号是经过标准化处理的。
-标准化处理之后只有2个取值—高电平、低电平,分...</p>
+标准化处理之后只有2个取值—-高电平、低电平,分...</p>
           
         </div>
         <div class="atricle-item-time">
@@ -319,5 +318,21 @@ $(function() {
 </script>
 </div>
     </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 </html>
