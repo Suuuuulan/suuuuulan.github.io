@@ -76,20 +76,88 @@
 
     后来blablabla的最先接触易语言（写CF外挂😂），后来又了解到其他的语言，到后来玩的Minecraft，让我知道了Java的强大之处（并没有说别的语言不行嗷，PHP是世界上最好的语言！）。——跨平台
 </code></pre><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Java是一门高级的面向对象的程序设计语言。使用Java语言编写的程序是跨平台的，从PC机到手持电话，到处都运行着Java开发的程序和游戏。Java程序可以在任何计算机、操作系统以及支持Java的硬件设备上运行。</span><br><span class="line"></span><br><span class="line">（引用自“Java从入门到精通”）</span><br></pre></td></tr></table></figure>
-<h3 id="0x00-下载JDK、安装JDK和配置环境变量"><a href="#0x00-下载JDK、安装JDK和配置环境变量" class="headerlink" title="0x00 下载JDK、安装JDK和配置环境变量"></a>0x00 下载JDK、安装JDK和配置环境变量</h3><h4 id="1-下载并安装JDK"><a href="#1-下载并安装JDK" class="headerlink" title="1.下载并安装JDK"></a>1.下载并安装JDK</h4><p><a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase-downloads.html">https://www.oracle.com/java/technologies/javase-downloads.html</a></p>
-<p>下载完成安装后，打开自己所安装的文件夹</p>
+<h3 id="0x01-下载JDK、安装JDK和配置环境变量"><a href="#0x01-下载JDK、安装JDK和配置环境变量" class="headerlink" title="0x01 下载JDK、安装JDK和配置环境变量"></a>0x01 下载JDK、安装JDK和配置环境变量</h3><h4 id="1-下载并安装JDK"><a href="#1-下载并安装JDK" class="headerlink" title="1.下载并安装JDK"></a>1.下载并安装JDK</h4><p>因为现在下载需要登录账号，建议先到www.oracle.com注册一个账号，再进行下载。</p>
+<p><a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase-downloads.html">https://www.oracle.com/java/technologies/javase-downloads.html</a></p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_11-25-34.png" style="zoom:80%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_11-26-20.png" style="zoom:80%;" /></p>
+<p>下载完成安装后，打开自己所安装的文件夹，并记住所在位置。</p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_11-33-37.png" style="zoom:80%;" /></p>
 <h4 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2.配置环境变量"></a>2.配置环境变量</h4><p>一般默认为C:\Program Files\Java\下会有一个（JDK-版本号）的文件夹</p>
 <p>打开它目录下的bin文件夹，复制路径。</p>
-<p>就像这样<code>C:\Program Files\Java\jdk-11.0.8\bin</code></p>
+<p>就像这样<code>C:\Program Files\Java\jdk-14\bin</code></p>
 <p>按下<strong>Win+E</strong>，右键此电脑→<strong>属性</strong>，在打开的新窗口中，选择左侧带盾牌图标的<strong>高级系统设置</strong>。</p>
 <p>在<strong>高级</strong>选项卡中，点击右下角的<strong>环境变量</strong>按钮，下方有一个<strong>系统变量</strong>分组框。</p>
 <p>下方列表中的<strong>变量</strong>列中有一项为<code>Path</code>，我们单击这一行，选择右下角的<strong>编辑</strong>按钮。</p>
 <p>会弹出一个新的窗口，我们单击右侧的<strong>新建</strong>按钮，按下Ctrl+V将JDK的路径粘贴进去。</p>
 <p>依次单击确定按钮关闭所有窗口。</p>
-<h4 id="3-验证"><a href="#3-验证" class="headerlink" title="3.验证"></a>3.验证</h4><pre><code>    1.按下Win+X，再按A键，打开PowerShell。
-
-    2.输入javac，看是否输出帮助信息，输出帮助信息则为配置环境变量成功。
-</code></pre><h3 id="0x01-Eclipse的下载及汉化"><a href="#0x01-Eclipse的下载及汉化" class="headerlink" title="0x01  Eclipse的下载及汉化"></a>0x01  Eclipse的下载及汉化</h3><p><a target="_blank" rel="noopener" href="https://www.eclipse.org/downloads/">https://www.eclipse.org/downloads/</a></p>
+<h4 id="3-验证"><a href="#3-验证" class="headerlink" title="3.验证"></a>3.验证</h4><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.按下Win+X，再按A键，打开PowerShell。</span><br><span class="line"></span><br><span class="line">2.输入javac，看是否输出帮助信息，输出帮助信息则为配置环境变量成功。</span><br></pre></td></tr></table></figure>
+<h3 id="0x02-Eclipse的下载及汉化"><a href="#0x02-Eclipse的下载及汉化" class="headerlink" title="0x02  Eclipse的下载及汉化"></a>0x02  Eclipse的下载及汉化</h3><p>在开始学习之前，我们应该为自己准备一个得心应手的工具，这里推荐eclipse，最主要是免费，其次也有汉化，对新手来说是个不错的选择！</p>
+<h4 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h4><ol>
+<li>首先我们需要下载安装包，打开<a target="_blank" rel="noopener" href="https://www.eclipse.org/downloads/packages/">https://www.eclipse.org/downloads/packages/</a></li>
+<li>找到<strong>Eclipse IDE for Java Developers</strong>，在右侧选择对应系统的版本。<img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-37-03.png" alt=""></li>
+<li>选择过后将跳往新的网页，我们点击Download按钮下方的eclipse-java-<strong>**-</strong>-R-win32-x86_64.zip<img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-38-27.png" style="zoom:67%;" /></li>
+<li>下载完成之后，将其中的eclipse文件夹解压出来，记好解压的位置。<img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-39-54.png" style="zoom:80%;" /></li>
+</ol>
+<h4 id="2-汉化"><a href="#2-汉化" class="headerlink" title="2.汉化"></a>2.汉化</h4><ol>
+<li>打开<a target="_blank" rel="noopener" href="https://www.eclipse.org/babel/downloads.php">https://www.eclipse.org/babel/downloads.php</a></li>
+<li>找到下方的<code>Babel Language Pack Zips</code></li>
+<li>在这行话的下方一般会有3个日期，选择最新的。<img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-41-21.png" style="zoom:80%;" /></li>
+<li>在跳出的页面中，我们首先在选择语言，点击<code>Chinese (Simplified)</code>。<img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-43-41.png" alt=""></li>
+<li>一般选择<code>BabelLanguagePack-eclipse-zh_4.16.0.v20200711020001.zip (84.09%)</code>后边为版本号不一定相同前缀选择正确即可。<img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-44-29.png" alt=""></li>
+<li>依旧选择Download按钮下方的很长的链接。<img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-45-34.png" alt=""></li>
+<li>下载完成之后，打开压缩包，再打开里边的eclipse文件夹，我们会发现还有两个文件夹。<img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-46-25.png" style="zoom:80%;" /></li>
+<li>将这两个文件夹解压到上述我们安装好的eclipse文件夹中。<img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-49-31.png" style="zoom:80%;" /></li>
+</ol>
+<h4 id="3-新建快捷方式"><a href="#3-新建快捷方式" class="headerlink" title="3.新建快捷方式"></a>3.新建快捷方式</h4><p>​        在eclipse文件夹中，有一个应用程序<code>eclipse.exe</code>，我们右键将快捷方式发送到桌面即可。<img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-51-05.png" style="zoom:80%;" /></p>
+<p>​        双击打开就会发现一个汉化过的界面。</p>
+<h3 id="0x03-初识Eclipse-IDE"><a href="#0x03-初识Eclipse-IDE" class="headerlink" title="0x03  初识Eclipse IDE"></a>0x03  初识Eclipse IDE</h3><p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-22-47.png" style="zoom:67%;" /></p>
+<p>​        第一次打开，软件会提示你“选择一个目录作为工作空间”，这个自行选择存放的目录，左下角（将此值用作缺省值并且不在询问）我们选择打钩，下次打开eclipse就不会提示这个页面了。</p>
+<p>​        启动之后，我们会有一个欢迎页面，直接点击该标签右侧的关闭即可。如果打钩，每次开启都会有个欢迎页面。<img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-53-48.png" alt=""></p>
+<p>关闭之后的界面</p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_14-57-39.png" alt=""></p>
+<h3 id="0x04-第一个程序"><a href="#0x04-第一个程序" class="headerlink" title="0x04  第一个程序"></a>0x04  第一个程序</h3><h4 id="创建Java项目"><a href="#创建Java项目" class="headerlink" title="创建Java项目"></a>创建Java项目</h4><ul>
+<li>选择<strong>文件</strong>/<strong>新建</strong>/<strong>项目</strong></li>
+<li><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-00-39.png" style="zoom:67%;" /></li>
+<li>选择<strong>Java</strong>/<strong>Java项目</strong>/<strong>下一步</strong></li>
+<li><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-03-30.png" style="zoom: 67%;" /></li>
+<li>输入<strong>项目名称</strong>/选择<strong>项目布局</strong></li>
+<li><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-06-48.png" style="zoom:80%;" /></li>
+<li>这里不用管，直接选择<strong>Don’t Create</strong></li>
+<li><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-09-01.png" style="zoom:80%;" /></li>
+<li>我们下一步是新建类，把HelloJava左侧的箭头点开，<strong>右键src</strong>/<strong>新建</strong>/<strong>类</strong></li>
+<li><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-10-32.png" alt=""></li>
+<li><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-14-58.png" alt=""></li>
+</ul>
+<p>创建成功</p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-25-18.png" alt=""></p>
+<h4 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h4><p>既然项目名称已经是HelloWorld了，那就开始写吧！</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String say = <span class="string">&quot;你好！世界！&quot;</span>;<span class="comment">//字符串变量</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// TODO 自动生成的方法存根</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World!&quot;</span> + say);<span class="comment">//输出字符串+say变量</span></span><br><span class="line">    &#125;<span class="comment">//println()为输出函数，那自然会输出我们让它所输出的字符串。</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-31-18.png" style="zoom: 80%;" /></p>
+<h4 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h4><p>代码已经编写好了，让我们冲冲冲！！！！</p>
+<p>我们可以直接按下Ctrl+F11，直接运行。</p>
+<p>也可选择 菜单栏<strong>运行</strong>/<strong>运行</strong></p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-32-57.png" alt=""></p>
+<p>然后我们会发现我们在println()函数中的字符串是对应的，输出的结果也如我们所料。</p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-34-22.png" alt=""></p>
+<h3 id="0x05-更改编辑区的字体"><a href="#0x05-更改编辑区的字体" class="headerlink" title="0x05  更改编辑区的字体"></a>0x05  更改编辑区的字体</h3><p>在敲代码的过程中，长时间盯着屏幕，看小字是不是有模糊感，那么字体能不能调呢？答案是可以的。</p>
+<p>我们首先在菜单栏中，点击<strong>窗口</strong>/<strong>首选项</strong></p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-49-06.png" style="zoom:80%;" /></p>
+<p>选择<strong>常规</strong>/<strong>外观</strong>/<strong>颜色和字体</strong>/<strong>Java 编辑器文本字体</strong>/<strong>编辑</strong></p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-53-09.png" alt=""></p>
+<p>我们自己选择适合自己的字体以及大小，选择完成之后，我们点确定。</p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-54-23.png" style="zoom:80%;" /></p>
+<p>出来之后，我们可以在下方预览字体以及大小。如果不合适我们可以再次点击编辑更改。</p>
+<p>如果觉得合适，我们就点击<strong>应用并关闭</strong>，保存并关闭。</p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-55-35.png" style="zoom:80%;" /></p>
+<p>下图为更改完字体后，编辑区代码的状态。</p>
+<p><img src="https://raw.githubusercontent.com/Suuuuulan/imagess/master/Snipaste_2020-09-26_15-56-57.png" alt=""></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>作为学习的第一天，首先要将所需的东西准备好，以方便之后的学习。</p>
+<p>今天学习了如何下载JDK，如何配置JDK的环境变量。</p>
+<p>下载eclipse，并将其汉化。</p>
+<p>创建第一个程序，HelloWorld！</p>
+<p>并且将代码编写并运行出来。</p>
+<p>还有自定义设置编辑区的字体。</p>
+<h2 id="报错解决"><a href="#报错解决" class="headerlink" title="报错解决"></a>报错解决</h2><p><a target="_blank" rel="noopener" href="https://www.colabug.com/2020/0923/7715306/">https://www.colabug.com/2020/0923/7715306/</a></p>
 
 </article>
 
