@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   
-  <title> [ 苏兰的大杂烩 ]</title>
+  <title>[编程] [Java] [笔记]Java学习的第一天 [ 苏兰的大杂烩 ]</title>
   
     <!-- stylesheets list from config.yml -->
     
@@ -63,177 +63,47 @@
 </div>
     </div>
     <div class="container">
-        
+        <h1 class="post-title">[编程] [Java] [笔记]Java学习的第一天</h1>
+<article class="post markdown-style">
+  <p>本帖意在记录自己学习的点点滴滴，文中的有些内容仅代表个人观点，如有和您想法不同之处或者一些比较辣鸡的地方，还请您多多包涵。</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Wx411f7qN?p=14">https://www.bilibili.com/video/BV1Wx411f7qN?p=14</a></p>
+<p>教程如上</p>
+<p>以前也有学过其他编程语言，对于好多编程语言还处在一个懵懂的状态，每次学习一门新的知识，都是从零基础开始学习的。</p>
+<p>故本帖会<strong>从0到1</strong>。（也包括安装，环境变量配置，或者自己平时遇到的点点滴滴的问题。）</p>
+<h3 id="0x00-初识Java"><a href="#0x00-初识Java" class="headerlink" title="0x00  初识Java"></a>0x00  初识Java</h3><pre><code>    第一次初识Java应该是在以前的手机游戏上边（也包括一些APP），打开时界面上的一杯咖啡，还有图片下方带的“Java”字样，给我枯燥的童年留下了比较深刻的印象。
 
+    无论打开哪个应用，好似都是你的身影。
 
+    后来blablabla的最先接触易语言（写CF外挂😂），后来又了解到其他的语言，到后来玩的Minecraft，让我知道了Java的强大之处（并没有说别的语言不行嗷，PHP是世界上最好的语言！）。——跨平台
+</code></pre><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Java是一门高级的面向对象的程序设计语言。使用Java语言编写的程序是跨平台的，从PC机到手持电话，到处都运行着Java开发的程序和游戏。Java程序可以在任何计算机、操作系统以及支持Java的硬件设备上运行。</span><br><span class="line"></span><br><span class="line">（引用自“Java从入门到精通”）</span><br></pre></td></tr></table></figure>
+<h3 id="0x00-下载JDK、安装JDK和配置环境变量"><a href="#0x00-下载JDK、安装JDK和配置环境变量" class="headerlink" title="0x00 下载JDK、安装JDK和配置环境变量"></a>0x00 下载JDK、安装JDK和配置环境变量</h3><h4 id="1-下载并安装JDK"><a href="#1-下载并安装JDK" class="headerlink" title="1.下载并安装JDK"></a>1.下载并安装JDK</h4><p><a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase-downloads.html">https://www.oracle.com/java/technologies/javase-downloads.html</a></p>
+<p>下载完成安装后，打开自己所安装的文件夹</p>
+<h4 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2.配置环境变量"></a>2.配置环境变量</h4><p>一般默认为C:\Program Files\Java\下会有一个（JDK-版本号）的文件夹</p>
+<p>打开它目录下的bin文件夹，复制路径。</p>
+<p>就像这样<code>C:\Program Files\Java\jdk-11.0.8\bin</code></p>
+<p>按下<strong>Win+E</strong>，右键此电脑→<strong>属性</strong>，在打开的新窗口中，选择左侧带盾牌图标的<strong>高级系统设置</strong>。</p>
+<p>在<strong>高级</strong>选项卡中，点击右下角的<strong>环境变量</strong>按钮，下方有一个<strong>系统变量</strong>分组框。</p>
+<p>下方列表中的<strong>变量</strong>列中有一项为<code>Path</code>，我们单击这一行，选择右下角的<strong>编辑</strong>按钮。</p>
+<p>会弹出一个新的窗口，我们单击右侧的<strong>新建</strong>按钮，按下Ctrl+V将JDK的路径粘贴进去。</p>
+<p>依次单击确定按钮关闭所有窗口。</p>
+<h4 id="3-验证"><a href="#3-验证" class="headerlink" title="3.验证"></a>3.验证</h4><pre><code>    1.按下Win+X，再按A键，打开PowerShell。
 
-  <div class="article">
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/09/26/编程-Java-笔记-Java学习的第一天/">
-            [编程] [Java] [笔记]Java学习的第一天
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>本帖意在记录自己学习的点点滴滴，文中的有些内容仅代表个人观点，如有和您想法不同之处或者一些比较辣鸡的地方，还请您多多包涵。
-简介https://www.bilibili.com/video/BV1Wx411f7qN?p=14
-教程如上
-以前也有学过其他编程语言，对于好多编程语言还处在一个懵懂的状态，...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-09-26
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/09/01/2020年9月1日【周二】【01020304】单片机小系统设计-第一课/">
-            2020年9月1日【周二】【01020304】单片机小系统设计-第一课
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>单片机单个芯片实现了微型计算机的功能。
-本课程主要学习的是C51单片机。
-1️⃣电源
-2️⃣时钟
-18、19管脚
-晶体振荡器（该知识点有些许疑惑，后续会补充，但愿不会搁置太久）
-3️⃣复位（RESET）
-9管脚
-4️⃣EA
+    2.输入javac，看是否输出帮助信息，输出帮助信息则为配置环境变量成功。
+</code></pre><h3 id="0x01-Eclipse的下载及汉化"><a href="#0x01-Eclipse的下载及汉化" class="headerlink" title="0x01  Eclipse的下载及汉化"></a>0x01  Eclipse的下载及汉化</h3><p><a target="_blank" rel="noopener" href="https://www.eclipse.org/downloads/">https://www.eclipse.org/downloads/</a></p>
 
-\over EAEA上方是有上划线的！！！
-这个横杠→为低电平时有效。
+</article>
 
-...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-09-01
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/08/31/2020年8月31日-周一-01020304-数字电子技术-第一课/">
-            2020年8月31日 周一 01020304 数字电子技术 第一课
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>1.1  概述1.1.1  数字信号和数字电路
-模拟信号：在时间上和幅值上都是连续变化的信号。
-模拟电路：对模拟信号进行传递、加工和处理的电子线路。
-
-
-数字信号：在时间上和幅值上都是断续变化的离散信号。
-我们经常所处理的数字信号是经过标准化处理的。
-标准化处理之后只有2个取值—-高电平、低电平,分...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-08-31
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/08/15/Hexo搭建完成！/">
-            Hexo搭建完成！
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>感觉也并没有太难的地方，刚开始让镜像源卡住了。折腾了好一会
-
-TestTestTest1Test2...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-08-15
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2020/08/15/第一个/">
-            第一个
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2020-08-15
-            </span>
-          
-        </div>
-      </div>
-    
-      <div class="article-item">
-        <h2 class="article-item-header">
-          <a href="/2019/11/02/列车的故事/">
-            列车的故事
-          </a>
-        </h2>
-        <div class="article-item-content">
-          
-            <p>有一辆列车在你面前，列车员问你：“小伙子，你要上车吗？”你就问：“这车去哪儿？下一站什么时候到？车上还有座位吗？”还不等你问完，火车早就开走了，你只能等下一辆。可是下一辆来了，你还是面临同样的问题。等了很久，别人都已经到西伯利亚了。你还在车站。管他呢，上去啊！火车是朝前开的，去哪并不重要，关键在于窗...</p>
-          
-        </div>
-        <div class="atricle-item-time">
-          
-            <span>
-              2019-11-02
-            </span>
-          
-        </div>
-      </div>
-    
-  </div>
-
-
-
-    <div class="pagenator">
-    
-        <a class="extend prev-none">上一页</a>
+    <div class="pagenator post-pagenator">
     
     
 
     
-        
-            <span class="extend page-item page-item-select">1</span>
-        
-        
+    <p>上次更新 2020-09-26</p>
     
     
+        <a class="extend next post-next" href="/2020/09/01/2020%E5%B9%B49%E6%9C%881%E6%97%A5%E3%80%90%E5%91%A8%E4%BA%8C%E3%80%91%E3%80%9001020304%E3%80%91%E5%8D%95%E7%89%87%E6%9C%BA%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%B8%80%E8%AF%BE/">下一篇</a>
     
-        <a class="extend next-none">下一页</a>
-    
-    
-</div>
+    </div>
 
     </div>
     <div class="footer">
