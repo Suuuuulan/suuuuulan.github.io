@@ -1,71 +1,217 @@
 <!DOCTYPE html>
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  
-  <title>2020年8月31日 周一 01020304 数字电子技术 第一课 [ 苏兰的大杂烩 ]</title>
-  
-    <!-- stylesheets list from config.yml -->
-    
-      <link rel="stylesheet" href="/css/iLiKE.css">
-    
-  
-  
-  
-  <script src="//cdn1.lncld.net/static/js/3.1.1/av-min.js"></script>
-    <script id="leancloud">
-      AV.init({
-          appId: "6E5zTbTljdUbVW2WkXPsXGJk-gzGzoHsz",
-          appKey: "0vsyDKfNpeSECAI70J794ugv"
-      });
-    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<meta name="generator" content="Hexo 5.0.2"></head>
-<body>
-    <div class="header">
-        <div class="container">
-    <div class="menu">
-      <div class="menu-left">
-        <a href="/">
-          <img src="/favicon.ico"></img>
-        </a>
-      </div>
-      <div class="menu-right">
-        
-          
-          
-          
-          
-          
-          
-          <a href="/">首页</a>
-        
-          
-          
-          
-          
-          
-          
-          <a href="/archives">归档</a>
-        
-          
-          
-          
-          
-          
-          
-          <a href="/about">关于</a>
-        
-      </div>
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="1.1  概述1.1.1  数字信号和数字电路 模拟信号：在时间上和幅值上都是连续变化的信号。 模拟电路：对模拟信号进行传递、加工和处理的电子线路。   数字信号：在时间上和幅值上都是断续变化的离散信号。 我们经常所处理的数字信号是经过标准化处理的。 标准化处理之后只有2个取值—-高电平、低电平,分别用数字1、0表示。 下图为标准化的数字信号波形。  数字电路：对数字信号进行传递、加工和处理的电子">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年8月31日 周一 01020304 数字电子技术 第一课">
+<meta property="og:url" content="http://yoursite.com/2020/08/31/2020%E5%B9%B48%E6%9C%8831%E6%97%A5-%E5%91%A8%E4%B8%80-01020304-%E6%95%B0%E5%AD%97%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF-%E7%AC%AC%E4%B8%80%E8%AF%BE/index.html">
+<meta property="og:site_name" content="苏兰的大杂烩">
+<meta property="og:description" content="1.1  概述1.1.1  数字信号和数字电路 模拟信号：在时间上和幅值上都是连续变化的信号。 模拟电路：对模拟信号进行传递、加工和处理的电子线路。   数字信号：在时间上和幅值上都是断续变化的离散信号。 我们经常所处理的数字信号是经过标准化处理的。 标准化处理之后只有2个取值—-高电平、低电平,分别用数字1、0表示。 下图为标准化的数字信号波形。  数字电路：对数字信号进行传递、加工和处理的电子">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831150347.png">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831151042.png">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831151635.png">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/TB11ni9NXXXXXaRaXXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/20200831%E5%BC%95%E7%94%A8%E8%8A%AF%E7%89%87image.jpg">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/genjumidubutongfen.png">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831162730.png">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831163132.png">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831163334.png">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831163508.png">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831163605.png">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831163830.png">
+<meta property="og:image" content="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831163938.png">
+<meta property="article:published_time" content="2020-08-31T06:25:17.000Z">
+<meta property="article:modified_time" content="2020-09-01T08:40:36.223Z">
+<meta property="article:author" content="Suuuuulan">
+<meta property="article:tag" content="大二">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="数字电子技术">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831150347.png">
+
+<link rel="canonical" href="http://yoursite.com/2020/08/31/2020%E5%B9%B48%E6%9C%8831%E6%97%A5-%E5%91%A8%E4%B8%80-01020304-%E6%95%B0%E5%AD%97%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF-%E7%AC%AC%E4%B8%80%E8%AF%BE/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>2020年8月31日 周一 01020304 数字电子技术 第一课 | 苏兰的大杂烩</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">苏兰的大杂烩</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
-    </div>
-    <div class="container">
-        <h1 class="post-title">2020年8月31日 周一 01020304 数字电子技术 第一课</h1>
-<article class="post markdown-style">
-  <h2 id="1-1-概述"><a href="#1-1-概述" class="headerlink" title="1.1  概述"></a>1.1  概述</h2><h3 id="1-1-1-数字信号和数字电路"><a href="#1-1-1-数字信号和数字电路" class="headerlink" title="1.1.1  数字信号和数字电路"></a>1.1.1  数字信号和数字电路</h3><p><img src="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831150347.png" style="zoom: 50%;" /></p>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/31/2020%E5%B9%B48%E6%9C%8831%E6%97%A5-%E5%91%A8%E4%B8%80-01020304-%E6%95%B0%E5%AD%97%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF-%E7%AC%AC%E4%B8%80%E8%AF%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Suuuuulan">
+      <meta itemprop="description" content="扯淡性文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="苏兰的大杂烩">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2020年8月31日 周一 01020304 数字电子技术 第一课
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-31 14:25:17" itemprop="dateCreated datePublished" datetime="2020-08-31T14:25:17+08:00">2020-08-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-01 16:40:36" itemprop="dateModified" datetime="2020-09-01T16:40:36+08:00">2020-09-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="1-1-概述"><a href="#1-1-概述" class="headerlink" title="1.1  概述"></a>1.1  概述</h2><h3 id="1-1-1-数字信号和数字电路"><a href="#1-1-1-数字信号和数字电路" class="headerlink" title="1.1.1  数字信号和数字电路"></a>1.1.1  数字信号和数字电路</h3><p><img src="https://gitee.com/suuuuulan/images/raw/master/img/QQ%E6%88%AA%E5%9B%BE20200831150347.png" style="zoom: 50%;" /></p>
 <p><strong>模拟信号</strong>：在时间上和幅值上都是<strong>连续</strong>变化的信号。</p>
 <p><strong>模拟电路</strong>：对模拟信号进行传递、加工和处理的电子线路。</p>
 <hr>
@@ -250,176 +396,195 @@ AB_H=10*16^1+11*16^0=160+11=171</script><p><strong>特点</strong>：与二进�
 </table>
 </div>
 
-</article>
-
-    <div class="pagenator post-pagenator">
-    
-    
-        <a class="extend prev post-prev" href="/2020/09/01/2020%E5%B9%B49%E6%9C%881%E6%97%A5%E3%80%90%E5%91%A8%E4%BA%8C%E3%80%91%E3%80%9001020304%E3%80%91%E5%8D%95%E7%89%87%E6%9C%BA%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%B8%80%E8%AF%BE/">上一篇</a>
-    
-
-    
-    <p>上次更新 2020-09-01</p>
-    
-    
-        <a class="extend next post-next" href="/2020/08/15/Hexo%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%88%90%EF%BC%81/">下一篇</a>
-    
     </div>
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%A4%A7%E4%BA%8C/" rel="tag"># 大二</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
+              <a href="/tags/%E6%95%B0%E5%AD%97%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF/" rel="tag"># 数字电子技术</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/15/Hexo%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%88%90%EF%BC%81/" rel="prev" title="Hexo搭建完成！">
+      <i class="fa fa-chevron-left"></i> Hexo搭建完成！
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/01/2020%E5%B9%B49%E6%9C%881%E6%97%A5%E3%80%90%E5%91%A8%E4%BA%8C%E3%80%91%E3%80%9001020304%E3%80%91%E5%8D%95%E7%89%87%E6%9C%BA%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%B8%80%E8%AF%BE/" rel="next" title="2020年9月1日【周二】【01020304】单片机小系统设计-第一课">
+      2020年9月1日【周二】【01020304】单片机小系统设计-第一课 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-    <div class="footer">
-        <div class="container">
-    <div class="social">
-	<ul class="social-list">
-		
-			
-				
-				
-				<li>
-					<a href="mailto:1832588779@qq.com" title="email" target="_blank">
-					<i class="fa fa-email"></i>
-					</a>
-				</li>
-			
-		
-			
-		
-			
-		
-			
-		
-			
-		
-			
-		
-			
-				
-				<li>
-					<a href="https://github.com/Suuuuulan" title="github" target="_self">
-					<i class="fa fa-github"></i>
-					</a>
-				</li>
-			
-		
-			
-		
-			
-		
-			
-		
-			
-				
-				<li>
-					<a href="https://www.jianshu.com/u/bc0af6246e57" title="jianshu" target="_self">
-					<i class="fa fa-jianshu"></i>
-					</a>
-				</li>
-			
-		
-			
-		
-			
-		
-			
-		
-	</ul>
-</div>
-    <div class="copyright">
-        <span>
-            
-            
-            
-                © Suuuuulan 2020
-            
-        </span>
-    </div>
-    <div class="power">
-        <span>
-            Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/CaiChenghan/iLiKE">iLiKE Theme</a>
-        </span>
-    </div>
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-    <!--page counter part-->
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
 <script>
-function addCount (Counter) {
-    url=$('.article-date').attr('href').trim();
-    title = $('.article-title').text().trim();
-    var query = new AV.Query(Counter);
-    //use url as unique idnetfication
-    query.equalTo("url",url);
-    query.find({
-        success: function(results) {
-            if (results.length>0) {
-                var counter=results[0];
-                counter.fetchWhenSave(true); //get recent result
-                counter.increment("time");
-                counter.save();
-            } else {
-                var newcounter=new Counter();
-                newcounter.set("title",title);
-                newcounter.set("url",url);
-                newcounter.set("time",1);
-                newcounter.save(null,{
-                    success: function(newcounter) {
-                        //alert('New object created');
-                    }, error: function(newcounter,error) {
-                        alert('Failed to create');
-                    }
-                })
-            }
-        },
-        error: function(error) {
-            //find null is not a error
-            alert('Error:'+error.code+" "+error.message);
-        }
-    });
-}
-$(function() {
-    var Counter=AV.Object.extend("Counter");
-    //only increse visit counting when intering a page
-    if ($('.article-title').length == 1) {
-       addCount(Counter);
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
     }
-    var query=new AV.Query(Counter);
-    query.descending("time");
-    // the sum of popular posts
-    query.limit(10); 
-    query.find({
-        success: function(results) {
-                for(var i=0;i<results.length;i++) {
-                    var counter=results[i];
-                    title=counter.get("title");
-                    url=counter.get("url");
-                    time=counter.get("time");
-                    // add to the popularlist widget
-                    showcontent=title+" ("+time+")";
-                    //notice the "" in href
-                    $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
-                }
-            },
-        error: function(error) {
-            alert("Error:"+error.code+" "+error.message);
-        }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
     });
-});
+  }
 </script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">1.1  概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%92%8C%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF"><span class="nav-number">1.1.</span> <span class="nav-text">1.1.1  数字信号和数字电路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">1.2.</span> <span class="nav-text">1.1.2  数字电路的分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E6%95%B0%E5%88%B6%E5%92%8C%E7%A0%81%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text">1.2  数制和码制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-%E6%95%B0%E5%88%B6"><span class="nav-number">2.1.</span> <span class="nav-text">1.2.1  数制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="nav-number">2.1.1.</span> <span class="nav-text">一、十进制数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="nav-number">2.1.2.</span> <span class="nav-text">二、二进制数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%85%AB%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="nav-number">2.1.3.</span> <span class="nav-text">三、八进制数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="nav-number">2.1.4.</span> <span class="nav-text">四、十六进制数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">2.1.5.</span> <span class="nav-text">结论</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-%E4%B8%8D%E5%90%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E9%97%B4%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.2.</span> <span class="nav-text">1.2.2 不同进制数间相互转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E3%80%81%E5%85%AB%E8%BF%9B%E5%88%B6%E6%95%B0%E3%80%81%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BD%AC%E6%8D%A2%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="nav-number">2.2.1.</span> <span class="nav-text">一、二进制数、八进制数、十六进制数转换十进制数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6%E3%80%81%E5%85%AB%E8%BF%9B%E5%88%B6%E5%92%8C%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6"><span class="nav-number">2.2.2.</span> <span class="nav-text">二、十进制数转换为二进制、八进制和十六进制</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1%E3%80%81%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">1、十进制转换为二进制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%E3%80%81%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B4%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%85%AB%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">2、十进制整数转换为八进制数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3%E3%80%81%E5%8D%81%E8%BF%9B%E5%88%B6%E6%95%B4%E6%95%B0%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%95%B0"><span class="nav-number">2.2.2.3.</span> <span class="nav-text">3、十进制整数转换为十六进制数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%8E%E5%85%AB%E8%BF%9B%E5%88%B6%E5%92%8C%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.2.3.</span> <span class="nav-text">三、二进制与八进制和十六进制间的相互转换</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1%E3%80%81%E4%BA%8C%E8%BF%9B%E5%88%B6%E2%86%92%E5%85%AB%E8%BF%9B%E5%88%B6%EF%BC%9A"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">1、二进制→八进制：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%E3%80%81%E4%BA%8C%E8%BF%9B%E5%88%B6%E2%86%92%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%EF%BC%9A"><span class="nav-number">2.2.3.2.</span> <span class="nav-text">2、二进制→十六进制：</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Suuuuulan</p>
+  <div class="site-description" itemprop="description">扯淡性文章</div>
 </div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Suuuuulan</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
 
 </body>
 </html>
