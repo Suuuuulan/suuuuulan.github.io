@@ -21,15 +21,15 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="如何解决Windows环境下在Docker中运行*.sh，提示没有文件的问题 最近在尝试弄一个私有云相册，需要一个能够满足自动标记和查找图片并且简单可靠的应用，最好呢？是可以全平台的，PhotoPrism 便成为了我最好的选择，部署完后我发现我可能遇到了点麻烦。  如果你使用Windows系统，并且在Docker中运行一些*.sh文件，你可能会遇到这样的错误：Container command &amp;">
+  <meta name="description" content="虽说Docker统一了内部环境，但外部的环境还是不同的呀，造就了差异。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker没有这样的文件或目录">
 <meta property="og:url" content="http://yoursite.com/2022/08/18/Docker%E6%B2%A1%E6%9C%89%E8%BF%99%E6%A0%B7%E7%9A%84%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/index.html">
 <meta property="og:site_name" content="苏兰的大杂烩">
-<meta property="og:description" content="如何解决Windows环境下在Docker中运行*.sh，提示没有文件的问题 最近在尝试弄一个私有云相册，需要一个能够满足自动标记和查找图片并且简单可靠的应用，最好呢？是可以全平台的，PhotoPrism 便成为了我最好的选择，部署完后我发现我可能遇到了点麻烦。  如果你使用Windows系统，并且在Docker中运行一些*.sh文件，你可能会遇到这样的错误：Container command &amp;">
+<meta property="og:description" content="虽说Docker统一了内部环境，但外部的环境还是不同的呀，造就了差异。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-18T13:59:13.000Z">
-<meta property="article:modified_time" content="2023-03-18T11:20:19.727Z">
+<meta property="article:modified_time" content="2023-03-18T13:03:32.446Z">
 <meta property="article:author" content="稣穌蘇蘓苏兰">
 <meta name="twitter:card" content="summary">
 
@@ -197,10 +197,11 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-18 19:20:19" itemprop="dateModified" datetime="2023-03-18T19:20:19+08:00">2023-03-18</time>
+                <time title="修改时间：2023-03-18 21:03:32" itemprop="dateModified" datetime="2023-03-18T21:03:32+08:00">2023-03-18</time>
               </span>
 
           
+            <div class="post-description">虽说Docker统一了内部环境，但外部的环境还是不同的呀，造就了差异。</div>
 
         </div>
       </header>
@@ -215,8 +216,8 @@
 <p>最近在尝试弄一个私有云相册，需要一个能够满足自动标记和查找图片并且简单可靠的应用，最好呢？是可以全平台的，<strong><em>PhotoPrism</em></strong> 便成为了我最好的选择，部署完后我发现我可能遇到了点麻烦。</p>
 <hr>
 <p>如果你使用Windows系统，并且在Docker中运行一些<code>*.sh</code>文件，你可能会遇到这样的错误：<br><code>Container command &#39;/start.sh&#39; not found or does not exist</code><br>或者<br><code>&#39;bash\r&#39;: No such file or directory</code><br>为啥呢？怎么办呀？本文将详细分析问题所在，并给出一些简单的解决方案。</p>
-<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>这个问题的根本原因是文件格式。Windows系统和Linux系统使用不同的 <em>换行符</em> 来表示文件的结束。Windows系统使用回车换行（<strong>CR-LF</strong>），而Linux系统使用换行（<strong>LF</strong>）。如果你在Windows系统下编辑或保存了一个<code>*.sh</code>文件，它可能会自动转换为CR-LF格式，而这个格式对于Linux系统来说是无法识别的。</p>
-<p>当你把这个*.sh文件放到Docker容器中运行时，Docker会尝试用/bin/sh来执行它，但是由于文件格式不正确，它会认为这个文件不存在或者不是一个可执行命令。</p>
+<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>这个问题的根本原因是文件格式。Windows系统和Linux系统使用不同的 <em>换行符</em> 来表示文件的结束。Windows系统使用回车换行(<strong>CR-LF</strong>)，而Linux系统使用换行(<strong>LF</strong>)。如果你在Windows系统下编辑或保存了一个<code>*.sh</code>文件，它可能会自动转换为(<strong>CR-LF</strong>)格式，而这个格式对于Linux系统来说是无法识别的。</p>
+<p>当你把这个<code>*.sh</code>文件放到Docker容器中运行时，Docker会尝试用/bin/sh来执行它，但是由于文件格式不正确，它会认为这个文件不存在或者不是一个可执行命令。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>解决方案很简单，就是把*.sh文件转换为LF格式。有很多方法可以做到这一点，比如：</p>
 <ul>
 <li>使用一些文本编辑器（如Sublime Text, VS Code等）来修改文件的换行符设- 置，并重新保存。</li>
